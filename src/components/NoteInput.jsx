@@ -15,6 +15,7 @@ function NoteInput({ notes, onNotesChange, onFileChange, onGenerate, fileName, e
         rows={10}
       />
 
+
       {/* placeholder for file upload */}
       <label htmlFor="file" className="label">
         Or upload a notes file
