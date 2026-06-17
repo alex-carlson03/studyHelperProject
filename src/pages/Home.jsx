@@ -37,7 +37,7 @@ function Home() {
         const formData = new FormData();
         formData.append('file', file);
 
-        const uploadRes = await fetch('/api/upload', {
+        const uploadRes = await fetch(`${process.env.REACT_APP_API_URL || ''}/api/upload`, {
           method: 'POST',
           body: formData,
         });
@@ -52,7 +52,7 @@ function Home() {
 
       // 2. Ask the backend to extract the text + run the LLM. Returns
       //    { summary, keywords, questions } — exactly what <Results> expects.
-      const genRes = await fetch('/api/generate', {
+      const genRes = await fetch(`${process.env.REACT_APP_API_URL || ''}/api/generate`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ notes, blobName, fileName: uploadedName }),
