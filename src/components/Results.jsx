@@ -1,6 +1,6 @@
 import Keywords from './Keywords';
 import Questions from './Questions';
-import {FaRobot, FaScroll, FaClipboardList, FaQuestion, FaBug} from 'react-icons/fa' ;
+import {FaRobot, FaScroll, FaClipboardList, FaQuestion} from 'react-icons/fa' ;
 
 
 // Results shows the three output cards. It receives the whole results object
