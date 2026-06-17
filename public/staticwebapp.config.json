@@ -1,0 +1,12 @@
+{
+    "routes": [
+        {
+            "route": "/api/*",
+            "rewrite": "https://study-helper-api123.azurewebsites.net/api/*"
+        }
+    ],
+    "navigationFallback": {
+        "rewrite": "/index.html",
+        "exclude": ["/api/*"]
+    }
+}
