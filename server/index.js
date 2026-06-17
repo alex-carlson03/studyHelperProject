@@ -25,7 +25,7 @@ app.use('/api', generateRoute);
 
 // Use SERVER_PORT (not PORT) so it doesn't clash with react-scripts, which
 // reads PORT from the same root .env and would try to use the same port.
-const port = process.env.SERVER_PORT || 5000;
+const port = process.env.PORT || process.env.SERVER_PORT || 5000;
 app.listen(port, () => {
   console.log(`Study Helper backend running on http://localhost:${port}`);
 });
